@@ -2,6 +2,9 @@
 # the content of html to the root of the website,
 # over-writting older file.
 
+# pull from github
+git pull
+
 # you have execute that as root
 cp html/* /var/www/html/ -rf
 

@@ -42,3 +42,11 @@
 .fornato{
     font-family: fornato;
 }
+
+a{
+    color:rgb(9, 255, 0);
+}
+
+a:hover{
+    color:rgb(5, 139, 0);
+}
