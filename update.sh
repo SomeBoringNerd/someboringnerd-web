@@ -2,9 +2,8 @@
 # the content of html to the root of the website,
 # over-writting older file.
 
-# you should execute that as root
-
-cp html/ /var/www/html/ -rf
+# you have execute that as root
+cp html/* /var/www/html/ -rf
 
 # required by Nginx for file upload for exemple.
 # without it, stuff might break.
