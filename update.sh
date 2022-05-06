@@ -1,6 +1,10 @@
 # this script will update the website by moving 
 # the content of html to the root of the website,
 # over-writting older file.
+# if the entirety of your website is static, 
+# you can remove that line to delete unused, older files
+
+# sudo rm -rf /var/www/html/*
 
 # pull from github
 git pull
