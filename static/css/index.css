@@ -31,8 +31,7 @@
 
 html{
     background-image: url('/img/background.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size:cover;
 }
 
 h1{
@@ -55,6 +54,26 @@ h2{
     animation: typing 2.5s forwards;
 }
 
+.youtube
+{
+    position: fixed;
+    height: 240px;
+    width: 600px;
+    border: thick double red;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+}
+
+.close{
+    float:right;
+    clear:right;
+}
+
+.pre {
+    display: flex;
+    justify-content: center;
+}
 
 .container {
   display: inline-block;

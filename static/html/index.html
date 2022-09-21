@@ -10,8 +10,20 @@
         <center>
             <br>
             <h1 style="font-size:2.5vw;" class="fade-in-welc">Welcome to</h1>
+            
             <h1 style="font-size:5vw;" class="fade-in-title">SomeBoringNerd.xyz</h1>
             <br>
+            
+            <div class="pre">
+                <div class="youtube" id="pre">
+                    <img src="/img/close.png" height="32px" width="32px" class="close" onclick="toggle()">
+                    <br>
+                    <a href="https://www.youtube.com/channel/UC-YzkDQE8xRwgH1f-4vfKnA"><h1 style="font-size:2vw;">gaming channel</h1></a><br>
+                    <a href="https://www.youtube.com/channel/UCoQXdbuo7fGf12BTYCnJ1Eg"><h1 style="font-size:2vw;">game dev channel</h1></a><br>
+                    <a href="https://www.youtube.com/channel/UC7eQo-UM_r6p458pCV6rxeA"><h1 style="font-size:2vw;">programming channel</h1></a><br>
+                </div>
+            </div>
+
             <table>
                 <tr>
                     <td>
@@ -21,22 +33,22 @@
                     </td>
                     <td>
                         <center>
-                            <img class="fade-in-media" src="./img/logo/empty.png" height="128px" width="128px">
+                            <img class="fade-in-media" src="/img/logo/empty.png" height="128px" width="128px">
                         </center>
                     </td>
                     <td>
                         <center>
-                            <a href="https://github.com/SomeBoringNerd"><img class="fade-in-media" src="./img/logo/youtube.png" height="128px" width="128px"></a>
+                            <a><img class="fade-in-media" src="/img/logo/youtube.png" height="128px" width="128px" onclick="toggle()"></a>
                         </center>
                     </td>
                     <td>
                         <center>
-                            <img class="fade-in-media" src="./img/logo/empty.png" height="128px" width="128px">
+                            <img class="fade-in-media" src="/img/logo/empty.png" height="128px" width="128px">
                         </center>
                     </td>
                     <td>
                         <center>
-                            <a href="https://github.com/SomeBoringNerd"><img class="fade-in-media" src="./img/logo/discord.png" height="128px" width="128px"></a>
+                            <a href="https://discord.gg/gtfJY7uKCN"><img class="fade-in-media" src="/img/logo/discord.png" height="128px" width="128px"></a>
                         </center>
                     </td>
                 </tr>
@@ -64,5 +76,19 @@
             </table>
         </center>
     </body>
+    <script>
 
+    document.getElementById("pre").style.display = "none";
+
+    
+    function toggle() {
+    if (document.getElementById("pre").style.display !== "none") {
+        document.getElementById("pre").style.display = "none";
+    } else {
+        document.getElementById("pre").style.display = "block";
+    }
+    };
+
+
+    </script>
 </html>
