@@ -8,6 +8,11 @@
     src: url('/font/TypeWriter.ttf');
 }
 
+@font-face {
+    font-family: KGRedHands;
+    src: url('/font/KGRedHands.ttf');
+}
+
 .fade-in-welc { animation: fadeInWelc 1.25s; }
 .fade-in-title { animation: fadeInTitle 1.25s; }
 .fade-in-media { animation: fadeInTitle 2.5s; }
@@ -28,6 +33,20 @@
   to { width: 100% }
 }
 
+@media screen and (max-width: 1368px) 
+{
+    .disable_if_on_phone, iframe {
+        display: none;
+    }    
+
+    h1,h2,h3,h4,h5,h6
+    {
+        font-family: KGRedHands;
+        color: white;
+        -webkit-text-stroke: 2px black;
+    }
+}
+
 
 body{
     background-color: black;
@@ -39,14 +58,8 @@ html{
     background-color: gray;
 }
 
-h1{
-    font-family: OriginTech;
-    color: white;
-    -webkit-text-stroke: 2px black;
-}
-
-h2{
-    font-family: TypeWritter;
+h1,h2,h3,h4,h5,h6{
+    font-family: KGRedHands;
     color: white;
     -webkit-text-stroke: 2px black;
 }
