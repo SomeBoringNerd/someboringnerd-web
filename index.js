@@ -21,6 +21,10 @@ app.get('/ttd', (req, res) => {
     res.sendFile(path.join(__dirname, 'static', 'html', 'ttd.html'))
 })
 
+app.get('/pbm', (req, res) => {
+    res.sendFile(path.join(__dirname, 'static', 'html', 'pbm.html'))
+})
+
 app.get('/sitemap.xml', (req, res) => {
     res.sendFile(path.join(__dirname, 'static', 'html', 'sitemap.xml'))
 })
