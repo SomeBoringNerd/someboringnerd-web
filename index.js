@@ -20,3 +20,11 @@ app.get('/waifuhax', (req, res) => {
 app.get('/ttd', (req, res) => {
     res.sendFile(path.join(__dirname, 'static', 'html', 'ttd.html'))
 })
+
+app.get('/sitemap.xml', (req, res) => {
+    res.sendFile(path.join(__dirname, 'static', 'html', 'sitemap.xml'))
+})
+
+app.get('/Robots.txt', (req, res) => {
+    res.sendFile(path.join(__dirname, 'static', 'html', 'robot.txt'))
+})
