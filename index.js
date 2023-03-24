@@ -26,5 +26,5 @@ app.get('/sitemap.xml', (req, res) => {
 })
 
 app.get('/Robots.txt', (req, res) => {
-    res.sendFile(path.join(__dirname, 'static', 'html', 'robot.txt'))
+    res.sendFile(path.join(__dirname, 'static', 'html', 'Robots.txt'))
 })
