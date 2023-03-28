@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="icon" type="image/png" href="/img/Favicon.png" />
-        <title>SomeBoringNerd's Portfolio</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <meta name="twitter:card" content="summary_large_image">
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="https://someboringnerd.xyz/waifuhax"/>
-        <meta property="og:description" content="WaifuHax : 1.19.4 client">
-        <meta name="theme-color" content="#E74C3C">
-        <link href="/css/index.css" rel="stylesheet">
-    </head>
-
-    <%- include("header.ejs") %>
+  <%- include("head_stuff.ejs") %>
 
     <body style="text-align:center">
       
@@ -31,25 +18,29 @@
             <h3>One of the best looking ClickGUI around, comparable to old clients like Nodus</h3>
           </div>
         <br><br>
-        
-          
-        <table>
-          <thead><h2>Notable features :</h2></thead>
-          <tr>
-            <td>
-              <img class="thumbnail" src="https://via.placeholder.com/550" height="75%" width="75%">
-              <h3>Frame Dupe</h3>
-            </td>
-            <td>
-              <img class="thumbnail" src="https://via.placeholder.com/550" height="75%" width="75%">
-              <h3>Weeb modules</h3>
-            </td>
-            <td>
-              <img class="thumbnail" src="https://via.placeholder.com/550" height="75%" width="75%">
-              <h3>WaifuESP</h3>
-            </td>
-          </tr>
-        </table>
+        <h2>Notable features :</h2>
+        <article class="grid-container">    
+          <div class="grid-x grid-margin-x"> 
+            <div class="cell medium-4">
+              <center>
+                <img class="thumbnail" src="https://via.placeholder.com/550" height="75%" width="75%">
+                <h2>Auto Frame Dupe</h2>
+              </center>
+            </div>
+            <div class="cell medium-4">
+              <center>
+                <img class="thumbnail" src="https://via.placeholder.com/550" height="75%" width="75%">
+                <h2>Weeb jokes</h2>
+              </center>
+            </div>
+            <div class="cell medium-4">
+              <center>
+                <img class="thumbnail" src="https://via.placeholder.com/550" height="75%" width="75%">
+                <h2>WaifuESP</h2>
+              </center>
+            </div>
+          </div>
+        </article>
       </article>
       <%- include("footer.ejs") %>
   </body>

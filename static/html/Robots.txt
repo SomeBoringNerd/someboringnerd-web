@@ -1,4 +1,0 @@
-User-agent: Googlebot
-Disallow: /nogooglebot/
-
-Sitemap: https://someboringnerd.xyz/sitemap.xml

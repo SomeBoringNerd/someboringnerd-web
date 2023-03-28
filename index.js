@@ -28,7 +28,6 @@ app.get('/', (req, res) =>
 
 app.get('/wh', (req, res) => {
     res.render('wh')
-    //res.sendFile(path.join(__dirname, 'static', 'html', 'WaifuHax.html'))
 })
 
 app.get('/ttd', (req, res) => {
@@ -38,6 +37,11 @@ app.get('/ttd', (req, res) => {
 app.get('/projects', (req, res) => 
 {
     res.render('projects', {project_obj : projects})
+})
+
+app.get('/social', (req, res) => 
+{
+    res.render('social')
 })
 
 app.get('/api/project', (req, res) => {

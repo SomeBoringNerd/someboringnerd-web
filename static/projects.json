@@ -16,5 +16,11 @@
         "desc":"Minecraft anarchy server whose goal is to stay updated before anything else",
         "img_path": "/img/server-icon.png",
         "url": "https://reddit.com/r/SpaceAnarchy"
+    },
+    "3" : {
+        "name":"SomeBoringImageHost",
+        "desc":"Selfhosted alternative to upload.system",
+        "img_path": "/img/logo/github.png",
+        "url": "https://github.com/SomeBoringNerd/SomeBoringImageHost"
     }
 }
