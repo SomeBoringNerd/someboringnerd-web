@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Projects</title>
+        
+        
+        <link rel="icon" type="image/png" href="/img/Favicon.png" />
+        <link href="/css/index.css" rel="stylesheet">
+
+        <meta name="description" content="Welcome to my website">
+		<link rel="canonical" href="https://someboringnerd.xyz/">
+
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@OneBoringNerd">
+		<meta name="twitter:title" content="someboringnerd.xyz">
+		<meta name="twitter:description" content="Welcome to my website">
+		<meta name="twitter:image" content="https://someboringnerd.xyz/img/Favicon.png">
+    </head>
+    <%- include("header.ejs") %>
+    <body style="text-align: center;">
+        
+        <table>
+            <tr>
+            <%let e = 0;for(let i = 0; i < Object.keys(project_obj).length; i++){%>
+                <% if(e == 3) {%>
+                    </tr><tr>
+                <%e = 0}%>
+                <td style="padding-left: 3em;padding-right: 3em;">
+                    <h1><a href="<%- project_obj["" + i].url%>"><%- project_obj["" + i].name %></a></h1>
+                    <h3><%= project_obj["" + i].desc %></h3>
+                    <img src="<%- project_obj["" + i].img_path %>">
+                </td>
+                <%e++}%>
+            </tr>
+        </table>
+    </body>
+    <%- include("footer.ejs") %>
+</html>
