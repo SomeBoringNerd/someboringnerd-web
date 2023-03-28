@@ -19,6 +19,7 @@ html{
 
 body{
     background-color: rgb(31, 31, 31);
+    text-align: justify;
 }
 
 h1,h2,h3,h4,h5,h6
@@ -66,4 +67,14 @@ a:hover
     padding-right: 15%;
     padding-bottom: 3em;
     text-align: justify;
+}
+
+header , footer{
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: flex;
+    min-height: 5.5em;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
 }
