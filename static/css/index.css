@@ -1,14 +1,4 @@
 @font-face {
-    font-family: OriginTech;
-    src: url('/font/OriginTech.ttf');
-}
-
-@font-face {
-    font-family: TypeWritter;
-    src: url('/font/TypeWriter.ttf');
-}
-
-@font-face {
     font-family: KGRedHands;
     src: url('/font/KGRedHands.ttf');
 }
@@ -32,7 +22,7 @@ h1,h2,h3,h4,h5,h6
 p
 {
     font-family: KGRedHands;
-    font-size: 1em;
+    font-size: 1.2em;
     -webkit-text-stroke: 1px black;
     color:aliceblue;
 }
@@ -46,7 +36,8 @@ footer{
     padding-top: 1px;
 }
 
-a, a:visited{
+a, a:visited
+{
     color: rgb(0, 183, 255);
 }
 
