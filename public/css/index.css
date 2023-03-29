@@ -48,6 +48,7 @@ a:visited
 
 header a, footer a
 {
+    font-family: KGRedHands;
     padding-left: 2em;
     padding-right: 2em;
     color: rgb(0, 183, 255);
