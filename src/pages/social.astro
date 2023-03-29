@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Foot from '../components/Footer.astro';
+import Card from '../components/Card.astro'
+---
+<Layout title="Social (＠＾◡＾)" description="Wanna contact me / check out my things ?">
+	<main>
+		<Header/>
+		<div class="paragraph">
+			<h1 class="text-6xl">My socials networks</h1>
+			<p class="text-xl">I have a few of them (◕ ‿ ◕)</p>
+		</div>
+		<div class="p-8">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
+				<div class="p-4 rounded-md flex items-center justify-center h-full">
+					<Card title="Reddit" 
+							body="Sometime I post about WaifuHax" 
+							href="https://reddit.com/u/SomeBoringNerd" 
+							image="/img/ttd/reddit.png"
+							external_redirect="_blank"/>
+				</div>
+				<div class="p-4 rounded-md flex items-center justify-center h-full">
+					<Card title="Github" 
+							body="most of my code is hosted here" 
+							href="/wh" 
+							image="/img/logo/github.png"
+							external_redirect="_blank"/>
+				</div>
+				<div class="p-4 rounded-md flex items-center justify-center">
+					<Card title="Gitea" 
+							body="My github but sorted properly" 
+							href="https://git.someboringnerd.xyz" 
+							image="/img/logo/gitea.png"
+							external_redirect="_blank"/>
+				</div>
+				<div class="p-4 rounded-md flex items-center justify-center h-full">
+					<Card title="@SomeBoringNerd" 
+							body="Gamedev channel" 
+							href="https://youtube.com/@SomeBoringNerd" 
+							image="/img/logo/youtube.png"
+							external_redirect="_blank"/>
+				</div>
+				<div class="p-4 rounded-md flex items-center justify-center h-full">
+					<Card title="@MorganePlayVideoGames" 
+							body="Gaming channel" 
+							href="/wh" 
+							image="/img/logo/youtube.png"
+							external_redirect="_blank"/>
+				</div>
+				<div class="p-4 rounded-md flex items-center justify-center">
+					<Card title="@SomeBoringDev" 
+							body="Anything that's code" 
+							href="https://youtube.com/@SomeBoringDev" 
+							image="/img/logo/youtube.png"
+							external_redirect="_blank"/>
+				</div>
+				<div class="p-4 rounded-md flex items-center justify-center h-full">
+					<Card title="SomeBoringNerd#5428" 
+							body="My Discord server" 
+							href="https://discord.gg/gtfJY7uKCN" 
+							image="/img/logo/discord.png"
+							external_redirect="_blank"/>
+				</div>
+				<div class="p-4 rounded-md flex items-center justify-center">
+					<Card title="NameMC" 
+							body="NameMC" 
+							href="https://fr.namemc.com/profile/SomeBoringNerd.1" 
+							image="/img/logo/namemc.png"
+							external_redirect="_blank"/>
+				</div>
+				<div class="p-4 rounded-md flex items-center justify-center">
+					<Card title="Itch.io" 
+							body="Where I publish games" 
+							href="https://someboringnerd.itch.io" 
+							image="/img/logo/itchio.png"
+							external_redirect="_blank"/>
+				</div>
+			</div>
+		</div>
+		<Foot/>
+	</main>
+</Layout>

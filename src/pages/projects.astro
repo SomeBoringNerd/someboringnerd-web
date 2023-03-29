@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Foot from '../components/Footer.astro';
+import Card from '../components/Card.astro'
+---
+<Layout title="Projects (＠＾◡＾)" description="Wanna see what I've been up to ?">
+	<main>
+		<Header/>
+		<div class="paragraph">
+			<h1 class="text-6xl">My projects</h1>
+			<p class="text-xl">You can find here most of the public projects I'm working on (◕ ‿ ◕)</p>
+		</div>
+		<div class="p-8">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
+			  <div class="p-4 rounded-md flex items-center justify-center h-full">
+				<Card title="TTD" 
+						body="Adventure game where you alternate between reality and dream. Coming soon maybe." 
+						href="/projects/ttd" 
+						image="/img/ttd/logo.png"/>
+				</div>
+				<div class="p-4 rounded-md flex items-center justify-center h-full">
+					<Card title="WaifuHax" 
+							body="Minecraft ''QOL'' mod for anarchy servers. Full of weeb jokes and LGBT stuff" 
+							href="/projects/wh" 
+							image="/img/WaifuHax/logo.png"/>
+				</div>
+				<div class="p-4 rounded-md flex items-center justify-center">
+					<Card title="SpaceAnarchy" 
+							body="Minecraft 1.19.4 true survival, no rules, no ban, do whatever you want" 
+							href="https://reddit.com/r/SpaceAnarchy" 
+							image="/img/server-icon.png"/>
+				</div>
+			</div>
+		</div>
+		<Foot/>
+	</main>
+</Layout>

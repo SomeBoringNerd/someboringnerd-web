@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Foot from '../components/Footer.astro';
+
+let birth_day = new Date('2/1/2004').getFullYear();
+let tech = new Date('2/1/2017').getFullYear;
+let today = new Date().getFullYear();
+
+let Year = today - birth_day;
+---
+
+<Layout title="Welcome (＠＾◡＾)" description="Welcome to my website <3">
+	<main>
+		<Header/>
+			<article class="paragraph">
+				<h1 class="text-4xl">Welcome to my website</h1><br>
+				<p class="text-base">
+					Hi, I'm SomeBoringNerd, a {Year} year old french dev that does a lot of things.
+					My main activity online is making video games and mods but that's not just that.<br>
+					<br>
+					For more info on the subject, you can check <a href="/projects">this page</a>
+				</p>
+			</article>
+			<article class="paragraph">
+				<h1 class="text-3xl">Main projects</h1><br>
+				<section>
+					<p>
+						While I work on a lot of projects, here are my most important one : <br><br>
+						<a href="/wh">WaifuHax</a> : 1.19.4 Minecraft utility mod for anarchy servers<br><br>
+						<a href="/sa">SpaceAnarchy</a> : a minecraft anarchy server<br><br>
+						<a href="/ttd">Through The Dark</a> : a video game that is currently development<br><br>
+					</p>
+				</section>
+			</article>
+			<article class="paragraph">
+				<h1 class="text-3xl">Github stats</h1><br>
+				<section>
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-1 lg:gap-1">
+						<div class="p-6 rounded-md flex items-center justify-center h-full">
+							<img src="https://github-readme-stats.vercel.app/api?username=SomeBoringNerd&theme=dark&hide_border=false&include_all_commits=true&count_private=true">
+						</div>
+						<div class="p-6 rounded-md flex items-center justify-center h-full">
+							<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SomeBoringNerd&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact">
+						</div>
+					</div>
+				</section>
+			</article>
+		<Foot/>
+	</main>
+</Layout>

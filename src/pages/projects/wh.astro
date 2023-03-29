@@ -1,0 +1,52 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+import Card from "../../components/Card.astro";
+---
+
+<Layout title="WaifuHax" description="cool kid minecraft ''QOL'' mod">
+    <Header/>
+    <article class="paragraph">
+        <br>
+        <h1 class="text-4xl">WaifuHax</h1>
+        <p>WaifuHax is a 1.19.4 minecraft QOL mod for anarchy servers full of weeb jokes.</p>
+        <p>It was first a private bot client for 0b0t and has now evolved into a more complex mod</p>
+      </article>
+
+    <article class="paragraph">
+        <h1 class="text-2xl">ClickGUI : </h1>
+        <div>
+            <center>
+            <img src="/img/WaifuHax/ClickGUI.png" height="75%" width="75%">
+            <h3>One of the best looking ClickGUI around, comparable to old clients like Nodus</h3>
+            </center>
+          </div>
+        <br><br>
+        <h2 class="text-2xl">Notable features :</h2>
+    </article>
+        <div class="p-8">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
+			  <div class="p-4 rounded-md flex items-center justify-center h-full">
+				<Card title="AutoFrameDupe" 
+						body="Perform the frame dupe for you" 
+						href="/projects/wh" 
+						image="https://via.placeholder.com/550" />
+				</div>
+				<div class="p-4 rounded-md flex items-center justify-center h-full">
+					<Card title="Weeb modules" 
+							body="Numerous weeb jokes because funny" 
+							href="/projects/wh" 
+							image="https://via.placeholder.com/550"/>
+				</div>
+				<div class="p-4 rounded-md flex items-center justify-center">
+					<Card title="WaifuESP" 
+							body="Like forgehax but better" 
+							href="/projects/wh" 
+							image="https://via.placeholder.com/550"/>
+				</div>
+			</div>
+		</div>
+    <Footer/>
+</Layout>
