@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Foot from '../components/Footer.astro';
+
+let birth_day = new Date('2/1/2004').getFullYear();
+let tech = new Date('2/1/2017').getFullYear;
+let today = new Date().getFullYear();
+
+let Year = today - birth_day;
+---
+
+<Layout title="404 (⇀‸↼‶)" description="nothing here... (⇀‸↼‶)">
+	<main>
+		<Header/>
+            <!-- I will not ask why TEXT align center other things -->
+            <div style="text-align:center">
+                <img src="https://http.cat/404">
+            </div>
+		<Foot/>
+	</main>
+</Layout>

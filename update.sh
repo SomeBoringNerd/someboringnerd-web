@@ -1,6 +1,11 @@
-git reset --hard
+# reset any temp changes I could have made in prod
+git reset
 
-# pull from github
+# get my changes from github
 git pull
 
-systemctl restart website.service
+# actualize my node_modules folder
+npm i
+
+# build the project
+npm run build

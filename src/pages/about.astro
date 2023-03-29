@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Foot from '../components/Footer.astro';
+
+let birth_day = new Date('2/1/2004').getFullYear();
+let tech_year = new Date('2/1/2017').getFullYear();
+let today     = new Date().getFullYear();
+
+let Year = today - birth_day;
+let Year_Since_Tech = today - tech_year;
+
+let pronouns: string;
+
+const data = await fetch('https://pronoundb.org/api/v1/lookup?platform=discord&id=283205890474115072').then((response) =>
+    response.json()
+);
+
+pronouns = textFriendlyPronouns(getFormatedPronoun(data.pronouns));
+
+function getFormatedPronoun(pr)
+{
+    switch(pr){
+        case "hh":
+                return "he/him";
+            case "hi":
+                return "he/it";
+            case "hs":
+                return "he/she";
+            case "ht":
+                return "he/they";
+            case "ih":
+                return "it/him";
+            case "ii":
+                return "it/its";
+            case "is":
+                return "it/she";
+            case "it":
+                return "it/they";
+            case "shh":
+                return "she/he";
+            case "sh":
+                return "she/her";
+            case "si":
+                return "she/it";
+            case "st":
+                return "she/they";
+            case "th":
+                return "they/him";
+            case "ti":
+                return "they/its";
+            case "ts":
+                return "they/she";
+            case "tt":
+                return "they/they";
+            case "unspecified": case "any":
+                return "anything you want, I dont care";
+            case "ask":
+                return "%ASK_ME%"
+            case "avoid":
+                return "%DONT_USE_PRONOUNS%"
+            default:
+                return "none";
+    }
+}
+
+function textFriendlyPronouns(pr)
+{
+    if(pr == "%ASK_ME%"){
+        pr = "If you want to know my pronouns, ask me. Also I";
+    }else if (pr == "avoid"){
+        pr = "I'd rather be called by my name and I";
+    }else{
+        pr = "my current pronouns are " + pr + " and I";
+    }
+
+    return pr;
+}
+---
+
+<Layout title="About me (≧◡≦)" description="Wanna learn a bit more about me ? ٩(◕‿◕｡)۶">
+	<main>
+		<Header/>
+        <article class="paragraph">
+            <h1 class="text-4xl">Hello there ! ヽ(&gt;∀ &lt;☆)ノ</h1>
+            <br>
+            <p>
+                I'm SomeBoringNerd, I'm {Year} years old autistic trans-fem, I'm a french student that studies programming.
+                {pronouns} and go by the name Morgane. I enjoy anime, video games (especially Team Fortress 2 and Minecraft), and learning new things in programmation.
+                <br><br>
+                I have picked up tech when I was about 12, back then I first learned a bit of Python, HTML and CSS. {Year_Since_Tech} years later, I write code mostly for fun,
+                I b-became a UwU Awch Winyux usew and I'm enjoying every second of it.
+                <br><br>
+                I mostly code in Java, JavaScript and, at a somewhat correct level, C and C++.
+                I also love self-hosting and own 3 servers, the detail of it can be found on <a href="https://git.someboringnerd.xyz/SomeBoringNerd/Infrastructure" target="_blank">my gitea account</a>
+            </p>
+        </article>
+		<Foot/>
+	</main>
+</Layout>
