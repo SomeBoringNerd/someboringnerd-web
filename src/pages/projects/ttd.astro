@@ -1,0 +1,27 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+import Card from "../../components/Card.astro";
+---
+
+<Layout title="Through The Dark" description="In-dev game I'm working on">
+    <Header/>
+    <article class="paragraph">
+        <br>
+        <h1 class="text-4xl">Through The Dark</h1>
+        <p>Through The Dark is a game where you play as a student alterning between reality and her dreams</p>
+      </article>
+
+    <article class="paragraph">
+        <h1 class="text-2xl">Screenshots : </h1>
+        <div>
+            <center>
+            <img src="/img/ttd/beta_room.png" height="75%" width="75%">
+            <h3>The best place to dream in !</h3>
+            </center>
+          </div>
+    </article>
+    <Footer/>
+</Layout>
