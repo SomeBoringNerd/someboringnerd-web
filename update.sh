@@ -9,3 +9,6 @@ npm i
 
 # build the project
 npm run build
+
+# restart my website
+systemctl restart website.service
