@@ -1,5 +1,5 @@
 # reset any temp changes I could have made in prod
-git reset
+git reset --hard
 
 # get my changes from github
 git pull
