@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content'
+
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Blog from '../../components/Blog.astro';
+
+const posts = await getCollection('blog').then((posts) => Promise.all(posts.map(async (p) => ({ ...p, ...await p.render() }))))
+	.then((posts) => posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()))
+---
+
+<Layout title="My blog <3" description="Venting, talk about tech, etc..., anything can show up here :p">
+    <Header/>
+    <section class="paragraph">
+        <h1 class="text-3xl">Welcome to my blog ヽ(o＾▽＾o)ノ</h1>
+        <p>Here I talk about every and anything, from time to time</p>
+    </section>
+    <center>
+    {posts.map((post) => (
+        <Blog
+            url={`/blog/${post.slug}`}
+            title={post.data.title}
+            description={post.data.description}
+            date={post.data.date}
+        />
+        <br>
+    ))}
+    </center>
+    <Footer/>
+</Layout>
