@@ -11,3 +11,6 @@ then "npm run dev" for debugging
 
 or "npm run build" to build.
 
+# Nginx
+
+proxypass the port 1234
