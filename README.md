@@ -4,5 +4,10 @@ Repo of my website.
 https://someboringnerd.xyz
 
 # Usage
-Feel free to use it, just dont remove the credits, thank you.
+
+type "npm i" in terminal
+
+then "npm run dev" for debugging
+
+or "npm run build" to build
 
