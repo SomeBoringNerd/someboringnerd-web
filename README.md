@@ -1,5 +1,5 @@
 # someboringnerd.xyz
-Repo of my website.
+Repo for my website.
 
 https://someboringnerd.xyz
 
