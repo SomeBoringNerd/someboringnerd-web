@@ -3,7 +3,7 @@ Repo for my website.
 
 https://someboringnerd.xyz
 
-# Usage
+# Build
 
 type "npm i" in terminal
 
