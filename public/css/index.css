@@ -68,6 +68,17 @@ a:hover
     text-align: justify;
 }
 
+.code_block
+{
+    
+    background-color: black;
+}
+
+.code_block p
+{
+    padding-left: 1em;
+}
+
 .dontmove {
     display: flex;
     align-items: center;
