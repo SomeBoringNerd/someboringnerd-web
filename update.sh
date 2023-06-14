@@ -12,3 +12,5 @@ npm run build
 
 # restart my website
 systemctl restart website.service
+
+chmod +x update.sh
