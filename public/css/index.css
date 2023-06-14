@@ -3,12 +3,22 @@
     src: url('/font/Sono-Regular.ttf');
 }
 
+img
+{
+    border: thick double;
+    border-image: linear-gradient(#D60270, #0038A8) 20;
+    align-self: center;
+    max-height: 75%;
+    max-width: 75%;
+}
+
 html{
     background-color: rgb(14, 14, 14);
 }
 
 body{
-    background-color: rgb(31, 31, 31);
+    background: rgb(46,46,46);
+    background: linear-gradient(124deg, rgba(46,46,46,0.48921575466123945) 0%, rgba(255,255,255,0.13627457819065125) 100%);
     text-align: justify;
 }
 
@@ -33,7 +43,8 @@ p, .header, .footer
 header, footer
 {
     padding-bottom: 1.5em;
-    background-color: rgb(14, 14, 14);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0,0.5) 0%, rgba(0, 0, 0,0.5) 100%);
 }
 
 p a

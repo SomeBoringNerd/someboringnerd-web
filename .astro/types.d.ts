@@ -97,6 +97,13 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"blog": {
+".pbm-story.mdx": {
+  id: ".pbm-story.mdx",
+  slug: "pbm-story",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] },
 "test-blog.mdx": {
   id: "test-blog.mdx",
   slug: "test-blog",
