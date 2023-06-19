@@ -98,6 +98,47 @@ a:hover
     font-size: 0.9em;
 }
 
+@media screen and (min-width: 599px) 
+{
+    .dontmove {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        font-size: 0.9em;
+    }
+}
+@media screen and (max-width: 599px) 
+{
+    header .dontmove {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        font-size: 0.8em;
+    }
+}
+@media screen and (max-width: 489px) 
+{
+    header .dontmove {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        font-size: 0.7em;
+    }
+}
+@media screen and (max-width: 413px) 
+{
+    header .dontmove {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        font-size: 0.6em;
+    }
+}
+
 header , footer{
     padding-top: 1.45em;
     position: relative;
