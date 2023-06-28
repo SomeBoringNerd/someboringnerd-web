@@ -12,63 +12,48 @@ let Year_Since_Tech = today - tech_year;
 
 let pronouns: string;
 
-const data = await fetch('https://pronoundb.org/api/v1/lookup?platform=discord&id=283205890474115072').then((response) =>
+const data = await fetch('https://pronoundb.org/api/v2/lookup?platform=discord&ids=283205890474115072').then((response) =>
     response.json()
 );
-
-pronouns = textFriendlyPronouns(getFormatedPronoun(data.pronouns));
+pronouns = textFriendlyPronouns(getFormatedPronoun(data["283205890474115072"].sets));
 
 function getFormatedPronoun(pr)
 {
-    switch(pr){
-        case "hh":
+    if(pr.en.length == 1)
+    {
+        switch(pr)
+        {
+            case "he":
                 return "he/him";
-            case "hi":
-                return "he/it";
-            case "hs":
-                return "he/she";
-            case "ht":
-                return "he/they";
-            case "ih":
-                return "it/him";
-            case "ii":
-                return "it/its";
-            case "is":
-                return "it/she";
             case "it":
-                return "it/they";
-            case "shh":
-                return "she/he";
-            case "sh":
+                return "he/it";
+            case "she":
                 return "she/her";
-            case "si":
-                return "she/it";
-            case "st":
-                return "she/they";
-            case "th":
-                return "they/him";
-            case "ti":
-                return "they/its";
-            case "ts":
-                return "they/she";
-            case "tt":
-                return "they/they";
-            case "unspecified": case "any":
-                return "anything you want, I dont care";
+            case "they":
+                return "they/them";
+            case "any":
+                return "anything you want";
             case "ask":
-                return "%ASK_ME%"
+                return "ASK";
             case "avoid":
-                return "%DONT_USE_PRONOUNS%"
+                return "AVOID";
+            case "other":
+                return "OTHER";
+            case "UNSPECIFIED":
+                return "UNSPECIFIED";
             default:
-                return "none";
+                return "unavailable (PronounDB error)";
+        }
+    }else{
+        return pr.en["0"] + "/" + pr.en["1"];
     }
 }
 
 function textFriendlyPronouns(pr)
 {
-    if(pr == "%ASK_ME%"){
+    if(pr == "ASK"){
         pr = "If you want to know my pronouns, ask me. Also I";
-    }else if (pr == "avoid"){
+    }else if (pr == "AVOID"){
         pr = "I'd rather be called by my name and I";
     }else{
         pr = "my current pronouns are " + pr + " and I";
@@ -91,11 +76,9 @@ function textFriendlyPronouns(pr)
                 I have picked up tech when I was about 12, back then I first learned a bit of Python, HTML and CSS. {Year_Since_Tech} years later, I write code mostly for fun,
                 I b-became a UwU Awch Winyux usew and I'm enjoying every second of it.
                 <br><br>
-                I mostly code in Java, JavaScript and, at a somewhat correct level, C and C++. My main projects are WaifuHax, a 1.19.4 hacked client for anarchy servers and Through The Dark, a fantasy dream game.
-                <!-- this part is temporally removed -->
-                <!--I also love self-hosting and own 3 servers, the detail of it can be found on <a href="https://git.someboringnerd.xyz/SomeBoringNerd/Infrastructure" target="_blank">my gitea account</a>-->
+                I mostly code in Java, JavaScript and, at a somewhat correct level, C and C++. My main project is <a href="/projects/ttd">Through The Dark</a>, a fantasy dream game.
                 <br><br>
-                I'm mostly involved in the french Minecraft anarchy community, where I play mostly alone, and make my client.
+                I'm mostly involved in the french Minecraft anarchy community, where I play mostly alone, and make my clients.
             </p>
         </article>
 		<Foot/>
