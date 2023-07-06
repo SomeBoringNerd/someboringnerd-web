@@ -23,12 +23,10 @@ const { Content } = await entry.render()
 ---
 
 <Layout title={`${entry.data.title}`} description={`${entry.data.description}`}>
-    <Header/>
         <section class="paragraph">
             <h1 class="text-4xl">{entry.data.title}</h1>
             <p>Published on {entry.data.date.toDateString()}</p>
             <br>
             <Content/>
         </section>
-    <Footer/>
 </Layout>

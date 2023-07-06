@@ -20,6 +20,10 @@ body{
     background: rgb(46,46,46);
     background: linear-gradient(124deg, rgba(46,46,46,0.48921575466123945) 0%, rgba(255,255,255,0.13627457819065125) 100%);
     text-align: justify;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
 h1,h2,h3,h4,h5,h6
@@ -47,6 +51,10 @@ header, footer
     background: linear-gradient(180deg, rgba(0, 0, 0,0.5) 0%, rgba(0, 0, 0,0.5) 100%);
 }
 
+footer {
+    margin-top: auto;
+}
+
 p a
 {
     color: rgb(0, 183, 255);
@@ -57,12 +65,18 @@ a:visited
     color: rgb(0, 183, 255);
 }
 
-header a, footer a
+header a, footer a, footer p
 {
     font-family: KGRedHands;
     padding-left: 2em;
     padding-right: 2em;
     color: rgb(0, 183, 255);
+}
+
+.bottom
+{
+    padding-top: 4px;
+    font-size: 11px;
 }
 
 a:hover

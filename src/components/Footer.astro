@@ -1,14 +1,32 @@
 ---
+let citation = [
+    "I love headpats", 
+    "I use arch btw", 
+    "Morgane say trans right <3",
+    "paypal.me/SomeBoringNerd I want to buy the headpat.dealer domain name please",
+    "THE ONE AND ONLY",
+    "git commit to program stuff",
+    "watch Owl House, it's good",
+    "You are doing good lad ! (dont let anyone tell you otherwise <3)",
+    "DEMOMAN TF2"
+]
+
+function getRandomInt() 
+{
+  return Math.floor(Math.random() * (citation.length));
+}
+
 
 ---
     
     <footer>
-            <div class="dontmove">
-                <a href="https://github.com/SomeBoringNerd/someboringnerd-web" target="_blank">site code</a>
-                <a href="/credit">credit</a>
-            </div>
-            <br>
-            <div class="dontmove">
-                <a href="mailto:contact@someboringnerd.xyz" class="text-sm">You can contact me by mail : contact@someboringnerd.xyz</a>
-            </div>
-        </footer>
+        <div class="dontmove">
+            <a href="https://github.com/SomeBoringNerd/someboringnerd-web" target="_blank">site code</a>
+            <a href="/blog">blog</a>
+            <a href="/credit">credit</a>
+        </div>
+        <br>
+        <div class="dontmove">
+            <p class="bottom">{citation[getRandomInt()]}</p>
+        </div>
+    </footer>

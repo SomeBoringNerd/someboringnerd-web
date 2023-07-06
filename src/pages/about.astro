@@ -10,12 +10,16 @@ let today     = new Date().getFullYear();
 let Year = today - birth_day;
 let Year_Since_Tech = today - tech_year;
 
-let pronouns: string;
-
-const data = await fetch('https://pronoundb.org/api/v2/lookup?platform=discord&ids=283205890474115072').then((response) =>
+let pronouns: string = "my current pronouns are UNAVAILABLE (PronounDB error) and I";
+let id: string = '283205890474115072';
+const data = await fetch('https://pronoundb.org/api/v2/lookup?platform=discord&ids=' + id).then((response) =>
     response.json()
 );
-pronouns = textFriendlyPronouns(getFormatedPronoun(data["283205890474115072"].sets));
+
+if(data[id] !== undefined)
+{
+    pronouns = textFriendlyPronouns(getFormatedPronoun(data[id].sets));
+}
 
 function getFormatedPronoun(pr)
 {
@@ -42,7 +46,7 @@ function getFormatedPronoun(pr)
             case "UNSPECIFIED":
                 return "UNSPECIFIED";
             default:
-                return "unavailable (PronounDB error)";
+                return "UNAVAILABLE (PronounDB error)";
         }
     }else{
         return pr.en["0"] + "/" + pr.en["1"];
@@ -65,7 +69,6 @@ function textFriendlyPronouns(pr)
 
 <Layout title="About me (≧◡≦)" description="Wanna learn a bit more about me ? ٩(◕‿◕｡)۶">
 	<main>
-		<Header/>
         <article class="paragraph">
             <h1 class="text-4xl">Hello there ! <h1 class="text-2xl">ヽ(&gt;∀ &lt;☆)ノ</h1></h1>
             <br>
@@ -81,6 +84,5 @@ function textFriendlyPronouns(pr)
                 I'm mostly involved in the french Minecraft anarchy community, where I play mostly alone, and make my clients.
             </p>
         </article>
-		<Foot/>
 	</main>
 </Layout>
