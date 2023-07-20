@@ -13,12 +13,6 @@
         <priority>0.75</priority>
     </url>
     <url>
-        <loc>https://someboringnerd.xyz/projects/wh</loc>
-        <lastmod>2023-04-26</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
         <loc>https://someboringnerd.xyz/projects/ttd</loc>
         <lastmod>2023-04-26</lastmod>
         <changefreq>always</changefreq>
