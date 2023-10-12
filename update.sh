@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # reset any temp changes I could have made in prod
 git reset --hard
 
