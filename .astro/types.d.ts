@@ -204,14 +204,21 @@ declare module 'astro:content' {
   slug: "ttd_update_october";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"ttd_update_october_2023.mdx": {
+	id: "ttd_update_october_2023.mdx";
+  slug: "ttd_update_october_2023";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
 "update_1.mdx": {
 	id: "update_1.mdx";
   slug: "update_1";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
 };
 
@@ -223,5 +230,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	type ContentConfig = never;
+	type ContentConfig = typeof import("../src/content/config");
 }
