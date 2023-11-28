@@ -1,4 +1,4 @@
-# someboringnerd-web
+# someboringnerd.xyz
 Repo for my website.
 
 https://someboringnerd.xyz
