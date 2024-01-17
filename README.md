@@ -5,11 +5,7 @@ https://someboringnerd.xyz
 
 # Build
 
-type "npm i" in terminal
-
-then "npm run dev" for debugging
-
-or "npm run build" to build.
+build the docker image and then run it
 
 # Nginx
 
