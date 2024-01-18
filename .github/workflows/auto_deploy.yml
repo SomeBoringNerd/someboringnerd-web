@@ -24,7 +24,7 @@ jobs:
             # Stop and remove existing containers
             sudo docker stop prod_site
             sudo docker rm prod_site
-            sudo docker rmi sbn-web
+            sudo docker rmi sbn-web -f
 
             # Pull the latest source code
             git pull origin main
