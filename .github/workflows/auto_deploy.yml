@@ -19,6 +19,7 @@ jobs:
           host: ${{ secrets.PRODUCTION_SERVER_HOST }}
           username: ${{ secrets.PRODUCTION_SERVER_USERNAME }}
           key: ${{ secrets.PRODUCTION_SERVER_SSH_KEY }}
+          port: 22
           script: |
             # Stop and remove existing containers
             sudo docker stop prod_site
