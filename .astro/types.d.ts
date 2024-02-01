@@ -212,6 +212,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
+"ttd_update_january_2024.mdx": {
+	id: "ttd_update_january_2024.mdx";
+  slug: "ttd_update_january_2024";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 "ttd_update_november_2023.mdx": {
 	id: "ttd_update_november_2023.mdx";
   slug: "ttd_update_november_2023";
