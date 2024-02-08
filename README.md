@@ -52,7 +52,7 @@ I use Github's action to automatically update the website, if you want to do it 
 
 run `./scripts/updateWebsite`
 
-this script does two things : 
+this script does 4 things : 
 
 1) actually update the site
 
