@@ -1,2 +1,2 @@
 npm run build
-docker restart sbn_web
+docker restart prod_site
