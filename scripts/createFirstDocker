@@ -1,0 +1,6 @@
+cd ..
+npm i
+npm run build
+
+docker build -t sbn_web .
+docker run -d -v ./dist:/app/dist --restart unless-stopped --name prod_site -p 1234:1234 sbn_web

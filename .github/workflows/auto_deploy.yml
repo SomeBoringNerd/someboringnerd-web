@@ -21,17 +21,10 @@ jobs:
           key: ${{ secrets.PRODUCTION_SERVER_SSH_KEY }}
           port: 22
           script: |
-            # Stop and remove existing containers
-            sudo docker stop prod_site
-            sudo docker rm prod_site
-            sudo docker rmi sbn-web -f
-
             # move to the correct folder
             cd /home/debian/someboringnerd-web
 
             # Pull the latest source code
             git pull origin main
 
-            # Build and start the new Docker containers
-            sudo docker build -t sbn-web .
-            sudo docker run -d --restart unless-stopped --name prod_site -p 1234:1234 sbn-web
+            bash ./scripts/updateWebsite
