@@ -1,3 +1,5 @@
 docker stop prod_site
 docker remove prod_site
+docker stop temp_site
+docker remove temp_site
 docker image rm sbn_web

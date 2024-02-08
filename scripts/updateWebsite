@@ -1,2 +1,8 @@
 npm run build
+docker run -d -v ./dist:/app/dist --restart unless-stopped --name temp_site -p 1235:1234 sbn_web
+
 docker restart prod_site
+
+docker stop temp_site
+docker remove temp_site
+
