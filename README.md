@@ -3,19 +3,30 @@ Repo for my website.
 
 https://someboringnerd.xyz
 
-# Build
+# First Build
 
 This website use docker for deployement, make sure the port 1234 & 1235 are free.
 
-first, run `./scripts/createFirstDocker`, it will build the website and generate the docker image (and start it too !)
+If you are on a clean debian install (which i'm going to assume !), you just need to install node 20 (unless you already have it) :
+
+```
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - && sudo apt-get install -y nodejs
+```
+
+after that, just run `./scripts/createFirstDocker`, it will build the website and generate the docker image (and start it too !)
 
 secondly, check the nginx part : 
 
 # Nginx
 
-In order to update the website seemlessly, I use a secondary docker image to take on the first when it's being updated
+My nginx config for the website look like this : 
 
 ```
+upstream alternative_site {
+	server localhost:1235;
+}
+
+
 server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
@@ -26,12 +37,14 @@ server {
 		proxy_pass http://localhost:1234;
 	}
 
-    error_page 502 503 504 = @alternative_backend;
-    location @alternative_backend {
-        proxy_pass http://localhost:1235;
+    error_page 502 503 504 = @alternative_site;
+    location @alternative_site {
+        proxy_pass http://alternative_site;
     }	
 }
 ```
+
+It allows to run two instances of the website, which you'll see why I do so there :
 
 # Update
 
