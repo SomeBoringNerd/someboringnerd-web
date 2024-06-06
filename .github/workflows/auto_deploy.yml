@@ -24,6 +24,8 @@ jobs:
             # move to the correct folder
             cd /home/debian/someboringnerd-web
 
+            git reset --hard HEAD
+
             # Pull the latest source code
             git pull origin main
 
